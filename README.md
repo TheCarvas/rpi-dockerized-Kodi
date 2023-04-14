@@ -1,8 +1,8 @@
-# rimago/rpi-kodi
+# TheCarvas/rpi-dokerized-Kodi
 
 Dockerized [Kodi](https://kodi.tv/) with audio and video for the raspberry pi4.
 
-![Kodi screenshot](https://kodi.tv/sites/default/files/page/field_image/about--devices.jpg "Kodi screenshot")
+
 
 ## Features
 
@@ -28,7 +28,7 @@ The host system will need the following:
 version: "3.7"
 services:
   rpi-kodi:
-    image: rimago/rpi-kodi
+    image: TheCarvas/rpi-dokerized-Kodi
     container_name: "kodi"
     user: kodi
     network_mode: host
@@ -97,8 +97,8 @@ docker-compose exec  -u root kodi lircd
 ```
 
 ## Contributing
-This docker project is based on [erichough/kodi](https://github.com/ehough/docker-kodi).
+This docker project is based on [erichough/kodi](https://github.com/ehough/docker-kodi) and rimago/rpi-kodi (https://github.com/rimago/rpi-kodi)
 
 Constructive criticism and contributions are welcome! Please 
-[submit an issue](https://github.com/rimago/rpi-kodi/issues/new) or 
-[pull request](https://github.com/rimago/rpi-kodi/compare).
+[submit an issue](https://github.com/TheCarvas/rpi-dokerized-Kodi/issues/new) or 
+[pull request](https://github.com/TheCarvas/rpi-dokerized-Kodi/compare).
