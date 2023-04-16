@@ -32,7 +32,7 @@ RUN apt-get update                                                        && \
 # either install udev or make the required directory 
     sudo apt-get install uuid-dev                                         && \
 #    mkdir -p /etc/udev/rules.d
-    rm -rf /var/lib/apt/lists/*                                           
+    rm -r -f /var/lib/apt/lists/*                                           
 
 # besides kodi, we will install a few extra packages:
 #  - ca-certificates              allows Kodi to properly establish HTTPS connections
@@ -96,7 +96,7 @@ RUN sudo apt-get install python3-pip python3-crypto build-essential python3-all-
     pip install pycryptodomex                                                               && \
     ln -s /usr/lib/python3/dist-packages/Crypto /usr/lib/python3/dist-packages/Cryptodome   && \
     apt-get -y --purge autoremove                                                           && \
-    rm -rf /var/lib/apt/lists/*
+    rm -r -f /var/lib/apt/lists/*
 
 RUN groupadd -g 9002 kodi && useradd -u 9002 -r -g kodi kodi && usermod -a -G video kodi
 
